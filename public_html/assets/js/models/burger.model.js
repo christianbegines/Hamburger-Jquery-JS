@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 
-var gulp = require('gulp');
-
-gulp.task('default', function () {
-    // place code for your default task here
-});
+var Burger = function(panSup,panInf,carne){
+    this.panInferior=panInf;
+    this.panSuperior=panSup;
+    this.carne=carne;
+};
+Burger.prototype.modelCheck=function(){
+    
+};

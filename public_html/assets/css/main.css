@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-feb-2017, 9:20:09
+    Author     : christianbegines
+*/
+
+.fondo-hamburgeseria{
+    background-image: url("../images/tabla.jpg" ); 
+    width: 100%;
+    height: 100%;
+    
+;  
+}
+.imagen-receta{
+    
+}
+.bloque{
+ height: 185px;
+}
+.derecha{
+    float:right;
+}
+.mg_top-50{
+    margin-top: 170px;
+}
+.mg_top-20{
+    margin-top: 20px;
+}
+.mg_top-40{
+    margin-top: 40px;
+}
+.mg_left-50{
+    margin-left:50px;
+}
+.ingrediente{
+   width: 155px;
+}
+.black{
+    background-color: black;
+}
+.en-mesa{
+    height: 40px;
+}
+.mesa{
+    align-self: center;
+}
+
+.animacionMontaje{
+    animation-name:montaje;
+    animation-duration:4s;
+    animation-delay: 2s;
+}
+
+@keyframes montaje{
+    0%{left:0px;top:0px;}
+    25%{left:0px;top:50px;}
+    50%{left:50px;top:50px;}
+    75%{left:50px;top:0px;}
+    100%{left:0px;top:0px;}
+}
