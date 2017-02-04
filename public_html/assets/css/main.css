@@ -47,7 +47,49 @@ and open the template in the editor.
 }
 .mesa{
     align-self: center;
+    width: 150px;
+    transform: translate(0px,100px);
 }
+.carnIng{
+    
+}
+.pepinilloIng{
+    
+}
+.lechugaIng{
+    
+}
+.mostazaIng{
+    
+}
+.ketchupIng{
+    
+}
+.baconIng{
+   
+}
+.cebollaIng{
+    
+}
+.tomateIng{
+   
+}
+.panSupIng{
+    margin-left: 10px;
+    position: relative;
+    z-index: 12;
+}
+.panInf{
+    position: relative;
+    z-index: 0;
+    
+}
+.carne{
+    position: relative;
+    z-index: 6;
+}
+
+
 
 .animacionMontaje{
     animation-name:montaje;
@@ -57,8 +99,6 @@ and open the template in the editor.
 
 @keyframes montaje{
     0%{left:0px;top:0px;}
-    25%{left:0px;top:50px;}
-    50%{left:50px;top:50px;}
-    75%{left:50px;top:0px;}
-    100%{left:0px;top:0px;}
+    75%{left:0px;top:100px;}
+    100%{transform:translate(200px;200px)}
 }

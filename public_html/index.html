@@ -15,71 +15,81 @@ and open the template in the editor.
         <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="container ">       
+        <div class="container mg_top-20"> 
+            <h1>Bienvenidos a la Hamburgeseria de Christan</h1>
             <div class="row fondo-hamburgeseria mg_top-40">               
-                <div class="col-lg-3 derecha">
-                    <img class="imagen-receta mg_left-50" src="assets/images/receta2.png" alt=""/>
+                <div  id ="receta" class="col-lg-3 derecha">
+                    <img id="receta-actual" class="imagen-receta mg_left-50" src="assets/images/aleatorio.png" alt=""/>
                 </div>
-                <div class="col-lg-19" >
-                    <div class="container mesa" >
-                        <div class="en-mesa"><img  src="assets/images/panSupIng.png" alt=""/> </div>
-                        <div class="en-mesa" ><img  src="assets/images/hamburgerIng.png" alt=""/></div>                            
-                        <div class="en-mesa "><img  src="assets/images/panInfIng.png" alt=""/></div>                           
+                <div class="col-lg-9" >
+                    <div id="tabla-cocina" class="container mesa" >                                                      
+                        <div class="en-mesa panInf "><img  src="assets/images/panInfIng.png" alt=""/></div>                           
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-offset-1"></div>
-                
+
                 <div class="col-lg-offset-1"></div>
             </div>
-            <div class="row mg_top-40">
-                <div class="row ">
-                <div class="col-lg-1 ingrediente ">
-                    <img class="ingrediente" src="assets/images/panSupMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-2 ingrediente ">
-                    <img class="ingrediente" src="assets/images/mostazaMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-2 ingrediente">
-                    <img class="ingrediente" src="assets/images/pepinilloMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-2 ingrediente ">
-                    <img class="ingrediente" src="assets/images/cebollaMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-2 ingrediente">
-                    <img class="ingrediente" src="assets/images/baconMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-2 ingrediente ">
-                    <img class="ingrediente" src="assets/images/pescadoMesa.png" alt=""/>
-                </div>
-            </div> 
-            <div class="row ">
-                <div class="col-lg-1 ingrediente">
-                    <img class="" src="assets/images/panInfMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-1 ingrediente">
-                    <img class="" src="assets/images/ketchupMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-1 ingrediente">
-                    <img class="" src="assets/images/tomateMEsa.png" alt=""/>
-                </div>
-                <div class="col-lg-1 ingrediente">
-                    <img class="" src="assets/images/lechugaMesa.png" alt=""/>
-                </div>
-                <div class="col-lg-1 ingrediente">
-                    <img class="" src="assets/images/hamburgesaMEsa.png" alt=""/>
-                </div>
-                <div class="col-lg-1 ingrediente">
-                    <img class="" src="assets/images/quesoMesa.png" alt=""/>
-                </div>
-            </div> 
+
+            <div class="row mg_top-40"> 
+                <div class="col-lg-10">
+                    <div class="row ">
+                        <div class="col-lg-1 ingrediente ">
+                            <img id="panSup" ondragstart="" class="ingrediente" src="assets/images/panSupMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-2 ingrediente ">
+                            <img id="mostaza" class="ingrediente" ondragstart="" src="assets/images/mostazaMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-2 ingrediente">
+                            <img id="pepnillo" class="ingrediente" ondragstart="" src="assets/images/pepinilloMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-2 ingrediente ">
+                            <img id="cebolla" class="ingrediente" ondragstart="" src="assets/images/cebollaMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-2 ingrediente">
+                            <img id="bacon" class="ingrediente" ondragstart="" src="assets/images/baconMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-2 ingrediente ">
+                            <img id="pescado" class="ingrediente" ondragstart="" src="assets/images/pescadoMesa.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-1 ingrediente">
+                            <img  id="panInf" class="" ondragstart="" src="assets/images/panInfMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-1 ingrediente">
+                            <img id="ketchup" class="" ondragstart="" src="assets/images/ketchupMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-1 ingrediente">
+                            <img id="tomate" class="" ondragstart="" src="assets/images/tomateMEsa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-1 ingrediente">
+                            <img id="lechuga" class="" ondragstart="" src="assets/images/lechugaMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-1 ingrediente">
+                            <img id="carne" class="" ondragstart="" src="assets/images/hamburgesaMesa.png" alt=""/>
+                        </div>
+                        <div class="col-lg-1 ingrediente">
+                            <img id="queso" class="" ondragstart="" src="assets/images/quesoMesa.png" alt=""/>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-2"><button onclick="generateBurger()" class="btn btn-primary">Generar receta</button></div>
             </div>
         </div>
-        <!--Scripts-->
+        
+        <!--Script models-->
+        <script src="assets/js/models/burger.model.js" type="text/javascript"></script>
+        <!--Scripts vendor -->
         <script src="assets/vendor/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+        
+        <!--Script controlador-->
+        <script src="assets/js/controller/burger.controller.js" type="text/javascript"></script>
+        <script src="assets/js/init.js" type="text/javascript"></script>
     </body>
-    
-    
+
+
 </html>
 
