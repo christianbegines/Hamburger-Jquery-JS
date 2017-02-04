@@ -8,12 +8,11 @@ and open the template in the editor.
     Author     : christianbegines
 */
 
-.fondo-hamburgeseria{
-    background-image: url("../images/tabla.jpg" ); 
-    width: 100%;
-    height: 100%;
-    
-;  
+.fondo{
+    background-image: url("../images/fondo7.jpg" );  
+}
+.fondo-tabla{
+    background-image: url("../images/tabla.jpg" );  
 }
 .imagen-receta{
     
