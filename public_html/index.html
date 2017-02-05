@@ -17,101 +17,92 @@ and open the template in the editor.
     <body class="fondo">
         <div class="container mg_top-20"> 
             <h1>Bienvenidos a la Hamburgeseria de Christian</h1>
-            <div class="row fondo-tabla mg_top-40">               
+            <div class="row fondo-tabla mg_top-40" ondrop="onDropInTabla(event)" ondragover="onDragOverTabla(event)">               
                 <div  id ="receta" class="col-lg-3 derecha">
                     <img id="receta-actual" class="imagen-receta mg_left-50" src="assets/images/recetas/aleatorio.png" alt=""/>
                 </div>
                 <div class="col-lg-9" >
-                    <div id="tabla-cocina" class="container mesa" >                                                      
-                        <div class="en-mesa panInf "><img  src="assets/images/ingredientes/panInf.png" alt=""/></div>                           
+                    <div id="tabla-cocina" class="container mesa"   >                                                      
+                                                
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-offset-1"></div>
-
-                <div class="col-lg-offset-1"></div>
-            </div>
-
+          
             <div class="row mg_top-40"> 
                 <div class="col-lg-10">
                     <div class="row ">
-                        <div class="col-lg-1 ingrediente " ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente">
                             <img id="panSup" ondragstart="onDragStartIngrediente(event)" 
                                  class="ingrediente" src="assets/images/ingredientes/panSup-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-2 ingrediente " ondrop="onDropTabla(event)" 
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-2 ingrediente ">
                             <img id="mostaza" class="ingrediente" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/mostaza-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-2 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
-                            <img id="pepnillo" class="ingrediente" 
+                        <div class="col-lg-2 ingrediente" >
+                            <img id="pepinillo" class="ingrediente" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/pepinillo-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-2 ingrediente " ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-2 ingrediente " >
                             <img id="cebolla" class="ingrediente" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/cebolla-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-2 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-2 ingrediente" >
                             <img id="bacon" class="ingrediente" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/bacon-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-2 ingrediente " ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-2 ingrediente ">
                             <img id="pescado" class="ingrediente" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/pescado-pre.png" alt=""/>
                         </div>
                     </div>
                     <div class="row ">
-                        <div class="col-lg-1 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente" >
                             <img  id="panInf" class="" 
                                   ondragstart="onDragStartIngrediente(event)" 
                                   src="assets/images/ingredientes/panInf-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-1 ingrediente" ondrop="onDropTabla(event)" 
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente" >
                             <img id="ketchup" class="" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/ketchup-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-1 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente" >
                             <img id="tomate" class="" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/tomat-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-1 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente" >
                             <img id="lechuga" class="" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/lechuga-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-1 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente" >
                             <img id="carne" class="" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/carne-pre.png" alt=""/>
                         </div>
-                        <div class="col-lg-1 ingrediente" ondrop="onDropTabla(event)"
-                             ondragover="onDragOverTabla(event)">
+                        <div class="col-lg-1 ingrediente" >
                             <img id="queso" class="" 
                                  ondragstart="onDragStartIngrediente(event)" 
                                  src="assets/images/ingredientes/queso-pre.png" alt=""/>
                         </div>
                     </div>
                 </div> 
-                <div class="col-lg-2"><button onclick="generateBurger()" class="btn btn-primary">Generar receta</button></div>
+                <div class="col-lg-2">
+                    <div class="row">
+                        <button onclick="generateBurger(hamburguesa)" class="btn btn-primary">Atender pedido</button>
+                    </div>
+                    <div class="row mg_top-20">
+                        <button onclick="comprobarHamburguesa(hamburguesa)" class="btn btn-primary">Comprovar pedido</button>
+                    </div>
+                    
+                </div>
             </div>
         </div>
 

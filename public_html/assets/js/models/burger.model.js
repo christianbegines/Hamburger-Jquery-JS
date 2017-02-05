@@ -7,10 +7,9 @@ let maxIngredientes=12;
 
 
 var Burger = function(panSup,panInf,carne){
-    this.panInferior=panInf;
-    this.panSuperior=panSup;
+    this.panInf=panInf;
+    this.panSup=panSup;
     this.carne=carne;
 };
-Burger.prototype.generateBurger=function(){
-   
-};
+
+
