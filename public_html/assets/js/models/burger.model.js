@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-let maxIngredientes=12;
+var maxIngredientes=12;
 
 
 var Burger = function(panSup,panInf,carne){
