@@ -9,11 +9,11 @@ function asignarIngredientes(burger) {
         var random = ((Math.random() * 1));
         if (random > 0 && random <= 0.2) {
             $('#receta-actual').replaceWith(
-                    '<img id="receta-actual" src="assets/images/recetas/receta1.png"/>');
+                    '<img id="receta-actual"  class="receta mg_left-50" src="assets/images/recetas/receta1.png"/>');
 
         } else if (random > 0.2 && random <= 0.5) {
             $('#receta-actual').replaceWith(
-                    '<img  id="receta-actual"  src="assets/images/recetas/receta2.png"/>');
+                    '<img  id="receta-actual" class="receta mg_left-50"  src="assets/images/recetas/receta2.png"/>');
             Object.defineProperty(
                     burger, 'tomate', {value: false, configurable: true, writable: true}
             );
@@ -24,7 +24,7 @@ function asignarIngredientes(burger) {
 
         } else {
             $('#receta-actual').replaceWith(
-                    '<img  id="receta-actual"  src="assets/images/recetas/receta3.png"/>');
+                    '<img  id="receta-actual" class="receta mg_left-50" src="assets/images/recetas/receta3.png"/>');
             Object.defineProperty(
                     burger, 'lechuga', {value: false, configurable: true, writable: true}
             );
@@ -47,7 +47,7 @@ function comprobarHamburguesa(burger) {
         }
     }
     if (listo === true) {
-        alert('enhorabuena');
+        alert('ENHORABUENA');
         $('#panInf-tabla').removeClass('animacion-montaje_pan-inf_desmontar');
         $('#panInf-tabla').addClass('animacion-montaje_pan-inf_montar');
         $('#panSup-tabla').removeClass('animacion-montaje_pan-sup_desmontar');

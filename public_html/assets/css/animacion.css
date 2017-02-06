@@ -1,0 +1,49 @@
+
+
+.animacion-montaje_pan-inf_montar{
+    animation-name:animacion_pan-sup_montar;
+    animation-duration:2s;
+     top:-10px;
+
+}
+.animacion-montaje_pan-sup_montar{
+    animation-name:animacion_pan-inf_montar;
+    animation-duration:2s;
+    top:10px
+
+}
+.animacion-montaje_pan-inf_desmontar{
+    animation-name:animacion_pan-inf_desmontar;
+    animation-duration:2s;
+    top:10px;
+    
+
+}
+.animacion-montaje_pan-sup_desmontar{
+    animation-name:animacion_pan-sup_desmontar;
+    animation-duration:2s;
+    top:-10px;
+
+}
+
+@keyframes animacion_pan-sup_montar{
+    0%{top:0px;}
+    100%{top:-10px;transform:translate(0px;-10px;)}
+    
+}
+
+@keyframes animacion_pan-inf_montar{
+    0%{top:0px;}
+    100%{top:10px;transform:translate(0px;10x;)}
+    
+}
+@keyframes animacion_pan-sup_desmontar{
+    0%{top:0px;}
+    100%{top:-10px;transform:translate(0px;-10px;)}
+    
+}
+@keyframes animacion_pan-inf_desmontar{
+    0%{top:0px;}
+    100%{top:10px;transform:translate(0px;10px;)}
+    
+}

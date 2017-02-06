@@ -1,143 +1,119 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 04-feb-2017, 9:20:09
-    Author     : christianbegines
-*/
+@import url(https://fonts.googleapis.com/css?family=Erica+One);
+.fondo {
+  background-image: url("../images/fondo7.jpg"); }
 
-.fondo{
-    background-image: url("../images/fondo7.jpg" );  
-}
-.fondo-tabla{
-    background-image: url("../images/tabla.jpg" );  
-}
-.imagen-receta{
-    
-}
-.bloque{
- height: 185px;
-}
-.derecha{
-    float:right;
-}
-.mg_top-50{
-    margin-top: 170px;
-}
-.mg_top-20{
-    margin-top: 20px;
-}
-.mg_top-40{
-    margin-top: 40px;
-}
-.mg_left-50{
-    margin-left:50px;
-}
-.ingrediente{
-   width: 155px;
-}
-.black{
-    background-color: black;
-}
-.en-mesa{
-    height: 40px;
-}
-.mesa{
-    align-self: center;
-    width: 150px;
-    transform: translate(0px,100px);
-}
-.carnIng{
-    
-}
-.pepinilloIng{
-    
-}
-.lechuga{
-    position:relative;
-    z-index: 4;
-}
-.mostazaIng{
-    
-}
-.ketchupIng{
-    
-}
-.baconIng{
-   
-}
-.cebolla{
-    
-}
-.tomate{
-   
-}
-.panSup{
-    margin-left: 10px;
-    position: relative;
-    z-index: 12;
-    
-}
-.panSup_cerrado{
-   
-}
-.panInf{
-    position: relative;
-    z-index: 0;
- 
-    
-}
-.carne{
-    position: relative;
-    z-index: 6;
-}
+.fondo-tabla {
+  background-image: url("../images/tabla.png"); }
 
-.animacion-montaje_pan-inf_montar{
-    animation-name:animacion_pan-sup_montar;
-    animation-duration:4s;
-     top:-10px;
+.letrero {
+  top: 20px;
+  height: 90px;
+  margin: auto;
+  display: block;
+  -webkit-animation: bounce .3s ease infinite alternate;
+  font-family: 'Erica One', cursive;
+  font-size: 50px;
+  color: green;
+  text-align: center;
+  line-height: 50px;
+  text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6); }
 
-}
-.animacion-montaje_pan-sup_montar{
-    animation-name:animacion_pan-inf_montar;
-    animation-duration:4s;
-    top:10px
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: -30px;
+    text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 #CCC, 0 7px 0 #CCC, 0 8px 0 #CCC, 0 9px 0 #CCC, 0 30px 30px rgba(0, 0, 0, 0.3); } }
 
-}
-.animacion-montaje_pan-inf_desmontar{
-    animation-name:animacion_pan-inf_desmontar;
-    animation-duration:2s;
-    top:10px;
-    
+.letras-gordas {
+  font-size: 50px;
+  font-family: 'Erica One', cursive; }
 
-}
-.animacion-montaje_pan-sup_desmontar{
-    animation-name:animacion_pan-sup_desmontar;
-    animation-duration:2s;
-    top:-10px;
+.bloque {
+  height: 185px; }
 
-}
+.derecha {
+  float: right; }
 
-@keyframes animacion_pan-sup_montar{
-    0%{top:0px;}
-    100%{top:-10px;transform:translate(0px;-10px;)}
-    
-}
+.ingrediente {
+  width: 155px; }
 
-@keyframes animacion_pan-inf_montar{
-    0%{top:0px;}
-    100%{top:10px;transform:translate(0px;10x;)}
-    
-}
-@keyframes animacion_pan-sup_desmontar{
-    0%{top:0px;}
-    100%{top:-10px;transform:translate(0px;-10px;)}
-    
-}
-@keyframes animacion_pan-inf_desmontar{
-    0%{top:0px;}
-    100%{top:10px;transform:translate(0px;10px;)}
-    
-}
+.black {
+  background-color: black; }
+
+.en-mesa {
+  height: 40px; }
+
+.mesa {
+  align-self: center;
+  width: 150px;
+  transform: translate(0px, 100px); }
+
+.pantalla_info {
+  border-radius: 20px;
+  background-color: sandybrown;
+  height: 100px;
+  margin-top: 20px;
+  border: 10px solid red; }
+
+.receta {
+  border: 5px solid sandybrown;
+  border-radius: 20px; }
+
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s; }
+
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none; }
+
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid; }
+
+.primary-button {
+  background-color: #3498DB;
+  border-bottom: 5px solid #2980B9;
+  text-shadow: 0px -2px #2980B9; }
+
+.succes-button {
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644; }
+
+.panSup {
+  margin-left: 10px;
+  position: relative;
+  z-index: 12; }
+
+.panInf {
+  position: relative;
+  z-index: 0; }
+
+.carne {
+  position: relative;
+  z-index: 6; }
+
+.lechuga {
+  position: relative;
+  z-index: 4; }
+
+.mg_top-20px {
+  margin-left: 20px; }
+
+.mg_top-30px {
+  margin-left: 30px; }
+
+.mg_top-40px {
+  margin-left: 40px; }
+
+.mg_top-50px {
+  margin-left: 50px; }

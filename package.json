@@ -1,15 +1,11 @@
 {
-    "name": "Hamburger-Jquery-JS",
-    "version": "1.0.0",
-    "keywords": [
-        "util",
-        "functional",
-        "server",
-        "client",
-        "browser"
-    ],
-    "author": "alumno",
-    "contributors": [
-    ],
-    "dependencies": {}
+  "name": "Hamburgeserioa",
+  "version": "1.0.0",
+  "description": "We like a boss",
+  "scripts": {
+    "compilar-material": "node-sass ./assets/vendor/materialize/scss -o ./assets/vendor/materialize/css",
+    "compilar-sass": "node-sass public_html/assets/scss -o public_html/assets/css"
+  },
+  "author": "Christian",
+  "license": "MIT"
 }

@@ -14,7 +14,9 @@ function onDragOverTabla(event) {
 function generateBurger(burger) {
     hamburguesa = new Burger(false, false, false);
     hamburguesa = asignarIngredientes(burger);
-    generado = true;
+    generado=true;
+    
+    
 }
 
 function onDropInTabla(event) {
@@ -34,7 +36,7 @@ function onDropInTabla(event) {
                     if ($('#tabla-cocina').find('#panInf-tabla').length) {
                         $('#panInf-tabla').before(ingredienteListoParaTabla);
                     } else {
-                        alert('pon primero la base del pan');
+                       throw 'pon primero la base del pan';
                     }
                 }
             } else {
@@ -45,7 +47,7 @@ function onDropInTabla(event) {
             throw 'el ingrediente no a sido pedido';
         }
     } else {
-        alert('no has generado el pedido');
+        throw 'no has generado el pedido';
     }
 }
 

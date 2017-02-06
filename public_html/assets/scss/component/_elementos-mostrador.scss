@@ -1,0 +1,40 @@
+
+.bloque{
+ height: 185px;
+}
+.derecha{
+    float:right;
+}
+
+
+.ingrediente{
+   width: 155px;
+}
+.black{
+    background-color: black;
+}
+.en-mesa{
+    height: 40px;
+}
+.mesa{
+    align-self: center;
+    width: 150px;
+    transform: translate(0px,100px);
+}
+.pepinillo{
+    
+}
+
+.pantalla_info{
+    border-radius: 20px;
+    background-color: sandybrown;
+    height: 100px;
+    margin-top: 20px;
+    border:10px solid red;
+    
+}
+.receta{
+    border:5px solid sandybrown;
+    border-radius: 20px;
+}
+

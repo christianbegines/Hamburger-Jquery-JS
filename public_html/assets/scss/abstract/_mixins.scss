@@ -1,0 +1,6 @@
+@mixin generic-button($bgcolor,$color){
+    background-color: $bgcolor;
+    border-bottom: 5px solid $color;
+    text-shadow:0px -2px $color;
+}
+
