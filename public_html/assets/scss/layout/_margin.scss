@@ -1,8 +1,13 @@
-$sizes:20px,30px,40px,50px;
 
-@each $size in $sizes{
-    .mg_top-#{$size}{
-        margin-left: $size;
+
+@each  $name,$size in $sizes{
+    .mg_left-#{$name}{
+        margin-left:  $size;
+    }
+}
+@each $name,$size in $sizes{
+    .mg_top-#{$name}{
+        margin-top:  $size;
     }
 }
 

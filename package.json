@@ -2,8 +2,7 @@
   "name": "Hamburgeserioa",
   "version": "1.0.0",
   "description": "We like a boss",
-  "scripts": {
-    "compilar-material": "node-sass ./assets/vendor/materialize/scss -o ./assets/vendor/materialize/css",
+  "scripts": {    
     "compilar-sass": "node-sass public_html/assets/scss -o public_html/assets/css"
   },
   "author": "Christian",

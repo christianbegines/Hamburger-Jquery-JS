@@ -14,40 +14,47 @@ function onDragOverTabla(event) {
 function generateBurger(burger) {
     hamburguesa = new Burger(false, false, false);
     hamburguesa = asignarIngredientes(burger);
-    generado=true;
-    
-    
+    generado = true;
+    $('#pantalla-info').html("");
+
+
 }
 
 function onDropInTabla(event) {
-    if (generado === true) {
-        var idIngrediente = event.dataTransfer.getData("text");
-        var ingredienteListoParaTabla = this.generarIngredienteEnTabla(idIngrediente);
-        var names = Object.getOwnPropertyNames(hamburguesa);
-        if (names.indexOf(idIngrediente) !== -1) {
-            if (!$('#tabla-cocina').find('#' + idIngrediente + '-tabla').length) {
-                if (idIngrediente === "panSup") {
-                    
-                    $('#tabla-cocina').prepend(ingredienteListoParaTabla);
+    try {
+        if (generado === true) {
+            var idIngrediente = event.dataTransfer.getData("text");
+            var ingredienteListoParaTabla = this.generarIngredienteEnTabla(idIngrediente);
+            var names = Object.getOwnPropertyNames(hamburguesa);
+            
+             if ($('#tabla-cocina').find('#panInf-tabla').length || idIngrediente === "panInf") {
+                if (!$('#tabla-cocina').find('#' + idIngrediente + '-tabla').length) {
+                    if (idIngrediente === "panInf") {
 
-                } else if (idIngrediente === "panInf") {
-                    $('#tabla-cocina').append(ingredienteListoParaTabla);
-                } else {
-                    if ($('#tabla-cocina').find('#panInf-tabla').length) {
-                        $('#panInf-tabla').before(ingredienteListoParaTabla);
+                        $('#tabla-cocina').append(ingredienteListoParaTabla);
+
+                    } else if (idIngrediente === "panSup") {
+                        $('#tabla-cocina').prepend(ingredienteListoParaTabla);
+                    
                     } else {
-                       throw 'pon primero la base del pan';
+                        if (names.indexOf(idIngrediente) !== -1) {
+                            $('#panInf-tabla').before(ingredienteListoParaTabla);
+                        } else {
+                             throw 'el ingrediente no a sido pedido';
+                        }
                     }
+                } else {
+                    throw 'Ya has puesto eso !! Fijate bien';
                 }
+                hamburguesa[idIngrediente] = true;
             } else {
-                throw 'ya has utilizado ese ingrediente';
+               throw 'Sin base de pan no vas a ningun lado';
             }
-            hamburguesa[idIngrediente] = true;
         } else {
-            throw 'el ingrediente no a sido pedido';
+            throw 'Atiende o a la calle!';
         }
-    } else {
-        throw 'no has generado el pedido';
+    } catch (ex) {
+        $('#pantalla-info').html('<p class="letras-pantalla_info">'+ex+'</p>');
     }
 }
 
@@ -74,8 +81,8 @@ function generarIngredienteEnTabla(idIngrediente) {
         ingredienteDiv.setAttribute("class", "en-mesa  " + idIngrediente + "");
     } else {
         ingredienteDiv.setAttribute("class", "en-mesa  " + idIngrediente + "");
-         $('#panInf-tabla').addClass('animacion-montaje_pan-inf_desmontar');
-         $('#panSup-tabla').addClass('animacion-montaje_pan-sup_desmontar');
+        $('#panInf-tabla').addClass('animacion-montaje_pan-inf_desmontar');
+        $('#panSup-tabla').addClass('animacion-montaje_pan-sup_desmontar');
     }
 
     ingredienteDiv.setAttribute("id", "" + idIngrediente + "-tabla");
